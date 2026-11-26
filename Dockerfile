@@ -1,5 +1,4 @@
-FROM nginx:1.27-alpine
-RUN rm -rf /usr/share/nginx/html/*
+FROM nginx:stable-alpine
+RUN apk update && apk upgrade --no-cache
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
-HEALTHCHECK CMD wget -q --spider http://localhost/ || exit 1
