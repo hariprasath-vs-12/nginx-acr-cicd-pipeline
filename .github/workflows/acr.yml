@@ -1,8 +1,6 @@
 name: build-scan-push-acr
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 env:
